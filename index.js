@@ -20,13 +20,18 @@ const args = message.content.slice(prefix.length).split(' ');
 const command = args.shift().toLowerCase();
 });
 // [GENERAL COMMAND]
-if (message.content === `${prefix}test`) {
+if (command === 'test') {
 	message.channel.send('Yep the bot Work');
 }
-if (message.content === `${prefix}hi`) {
+if (command === 'hi') {
 	message.channel.send('stop talking to me');
-}if (message.content === `${prefix}why?`) {
+}if (command === 'why?') {
 	message.channel.send('Because i am a bot');
+}if (command === 'mention') {
+	
+	const taggedUser = message.mentions.users.first();
+
+	message.channel.send(`You mention: ${taggedUser.username}`);
 }
 client.login(token);
 //to add your discord bot token, go to config.json

@@ -15,10 +15,14 @@ client.once('ready', () => {
 client.on('message', message => {
 	console.log(message.content);
 });
-// [PING COMMAND]
-if (message.content === 'p!test') {
+// [GENERAL COMMAND]
+if (message.content === `${prefix}test`) {
 	message.channel.send('Yep the bot Work');
 }
-
+if (message.content === `${prefix}hi`) {
+	message.channel.send('stop talking to me');
+}if (message.content === `${prefix}why?`) {
+	message.channel.send('Because i am a bot');
+}
 client.login(token);
 //to add your discord bot token, go to config.json

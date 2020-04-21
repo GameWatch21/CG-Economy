@@ -24,10 +24,9 @@ const args = message.content.slice(prefix.length).split(' ');
 const command = args.shift().toLowerCase();
 });
 // [GENERAL COMMAND]
-if (command === 'test') {
-	message.channel.send('Yep the bot Work');
-}
-if (command === 'hi') {
+if (command === 'test') 
+    client.commands.get('test').execute(message, args);
+}if (command === 'hi') {
 	message.channel.send('stop talking to me');
 }if (command === 'why?') {
 	message.channel.send('Because i am a bot');

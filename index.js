@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { prefix, token } = require('./config.json');
-
+client.commands = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('CG-Economy are Ready to Serve');

@@ -34,6 +34,15 @@ if (command === 'hi') {
 	message.channel.send(`You mention: ${taggedUser.username}`);
 }else if (!message.mentions.users.size) {
 	return message.reply('you need to tag a user in order for me to mention them!');
+}if (command === 'avatar') {
+	if (!message.mentions.users.size) {
+		return message.channel.send(`Your avatar: <${message.author.displayAvatarURL({ format: "png", dynamic: true })}>`);
+	}
+
+	const avatarList = message.mentions.users.map(user => {
+		return `${user.username}'s avatar: <${user.displayAvatarURL({ format: "png", dynamic: true })}>`;
+	});
+	message.channel.send(avatarList);
 }
 client.login(token);
 //to add your discord bot token, go to config.json

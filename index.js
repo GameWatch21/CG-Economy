@@ -32,6 +32,8 @@ if (command === 'hi') {
 	const taggedUser = message.mentions.users.first();
 
 	message.channel.send(`You mention: ${taggedUser.username}`);
+}else if (!message.mentions.users.size) {
+	return message.reply('you need to tag a user in order for me to mention them!');
 }
 client.login(token);
 //to add your discord bot token, go to config.json

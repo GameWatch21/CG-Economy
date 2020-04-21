@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require('./config.json')
 
 //This message will be send on your console if the bot are ready to run
 client.once('ready', () => {

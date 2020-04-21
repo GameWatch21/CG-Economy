@@ -9,6 +9,10 @@ client.once('ready', () => {
 client.on('message', message => {
 	console.log(message.content);
 });
+// [PING COMMAND]
+if (message.content === 'p!test') {
+	message.channel.send('Yep the bot Work');
+}
 
 //This is the key Where you need to add your Token
 client.login('Discord Bot Token insert here');

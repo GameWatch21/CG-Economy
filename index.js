@@ -1,6 +1,11 @@
+//This is are our complier
 const Discord = require('discord.js');
+
+//Adding the discord client if this is discord bot
 const client = new Discord.Client();
-const config = require('./config.json')
+
+//it will replace the prefix and discord bot token easily in config.json
+const { prefix, token } = require('./config.json');
 
 //This message will be send on your console if the bot are ready to run
 client.once('ready', () => {
@@ -15,5 +20,5 @@ if (message.content === 'p!test') {
 	message.channel.send('Yep the bot Work');
 }
 
-//This is the key Where you need to add your Token
-client.login('Discord Bot Token insert here');
+client.login(token);
+//to add your discord bot token, go to config.json

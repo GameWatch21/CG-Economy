@@ -14,6 +14,10 @@ client.once('ready', () => {
 //For Listening The Message
 client.on('message', message => {
 	console.log(message.content);
+if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
 });
 // [GENERAL COMMAND]
 if (message.content === `${prefix}test`) {

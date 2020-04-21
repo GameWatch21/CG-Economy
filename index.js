@@ -1,17 +1,13 @@
-//This is are our complier
+const fs = require('fs');
 const Discord = require('discord.js');
-
-//Adding the discord client if this is discord bot
 const client = new Discord.Client();
-
-//it will replace the prefix and discord bot token easily in config.json
 const { prefix, token } = require('./config.json');
 
-//This message will be send on your console if the bot are ready to run
+
 client.once('ready', () => {
 	console.log('CG-Economy are Ready to Serve');
 });
-//For Listening The Message
+
 client.on('message', message => {
 	console.log(message.content);
 if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -28,12 +24,12 @@ if (command === 'hi') {
 }if (command === 'why?') {
 	message.channel.send('Because i am a bot');
 }if (command === 'mention') {
-	
+	if (!message.mentions.users.size) {
+	return message.reply('you need to tag a user in order for me to mention them!');
+
 	const taggedUser = message.mentions.users.first();
 
 	message.channel.send(`You mention: ${taggedUser.username}`);
-}else if (!message.mentions.users.size) {
-	return message.reply('you need to tag a user in order for me to mention them!');
 }if (command === 'avatar') {
 	if (!message.mentions.users.size) {
 		return message.channel.send(`Your avatar: <${message.author.displayAvatarURL({ format: "png", dynamic: true })}>`);

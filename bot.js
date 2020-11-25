@@ -33,20 +33,7 @@ client.on('message',message => {
     message.channel.send(`${args}`)
   }
   if(command === "prune"){
-    const amount = parseInt(args[0]);
-    
-    if(isNaN(amount)) {
-      return message.channel.send("bruh,It's not a number");
-    }
-    if(amount < 2 || amount > 100 ) {
-      return message.channel.send("We only accept number 2-100");
-    }
-      
-      message.channel.bulkDelete(amount, true).catch( err => {
-      console.error(err);
-      message.channel.send("i'm just saying, there is something error when pruning message")
-      
-    })
+    client.commands.get("prune").execute(message, args);
    
   }
 });

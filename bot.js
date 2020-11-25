@@ -11,10 +11,6 @@ for (const file of commandFiles) {
 
 client.once = ('Ready', () => {
   console.log("Ah, it's time for work");
-  client.user.setActivity("with depression", {
-  type: "STREAMING",
-  url: "https://www.twitch.tv/monstercat"
-});
 });
 
 client.on('message',message => {

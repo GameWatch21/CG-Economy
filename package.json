@@ -1,0 +1,16 @@
+{
+  "name": "codeground",
+  "version": "1.0.0",
+  "description": "Was a test project to make us a better coder",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "GameWatch21",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.0",
+    "express": "^4.17.1"
+  }
+}

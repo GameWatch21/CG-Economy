@@ -8,6 +8,7 @@ The checked one, mean it's already working, for the others, i dont know when i w
 - [x] Bot online (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Sending Basic Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [ ] Sending Arguments Message
+- [x] Making an Embed message working (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Making Purne Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [ ] Make backend code more dynamic
 - [ ] Add avatar command

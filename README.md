@@ -10,7 +10,7 @@ The checked one, mean it's already working, for the others, i dont know when i w
 - [ ] Sending Arguments Message
 - [x] Making an Embed message working (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Making Purne Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
-- [ ] Make backend code more dynamic
+- [x] Make backend code more dynamic, not that dynamic,i  use my own style to write codes even it's bad (Thursday, 26 Novermber 2020 by **_GameWatch21_**)
 - [ ] Add avatar command
 - [ ] Create Status for bot
 - [ ] Making an Economy Games [This one is different, will be on differeny section]
@@ -45,3 +45,12 @@ Here are all the details what can you get for each roles, also you cant change r
 - Selling Equipment
 
 Note: It was CG-ECO, but i change it to Codord Ground because ehh, i will change the code for a bit and make a rework, Also following the discord.js Updates, so yeah stay tuned
+
+## 👤For contributors
+Actually i never thought to invite or ask an contributors, but if you want to contribute, you can try to learn to make a new command and we will publish your code with your credits, so if you have simple code that you want to share with us, it's okay, just DM me on Discord and send the code file on txt or whatever you want or just open an issue and paste the code
+
+## 🚫About Error Code
+If you found out a bug, or something that's weird on the code, just open a issue and i will try to solve it as fast as possible, and always i will say thank you for those who help me find out a bug
+
+## 🍴For Forking
+Feel free to fork my code, it's free and you can edit with your own style, well i didnt explain well the code what's the section is, what's this used for, so you will need to explore it yourself, you can decide you want to use my credits or no, i dont care just do whatever you want i will try to make new command and code as my free time

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Was a test project to make us a better coder",
   "main": "bot.js",
+  "engines": {
+    "node": "10.x"
+    },
   "scripts": {
+    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -12,6 +12,9 @@ for (const file of commandFiles) {
 
 client.once = ('Ready', () => {
   console.log("Ah, it's time for work");
+  client.set.userActivity(`Hello guys, im awake`, {
+   type: "playing"
+  });
 });
 
 client.on('message',message => {

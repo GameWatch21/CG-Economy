@@ -11,7 +11,7 @@ module.exports = {
  // .setAuthor(`${message.author}`, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
   .setDescription('You choose the legendary Thumb up')
 // .setThumbnail(`${message.guild.icon}`)
-  .addFields(
+  .addField(
     { name: 'Just about you and me, you will get', value: `You get $100 by reacting`},
    )
   //.addField('Inline field title', 'Some value here', true)

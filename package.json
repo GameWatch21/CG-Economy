@@ -4,8 +4,8 @@
   "description": "Was a test project to make us a better coder",
   "main": "bot.js",
   "engines": {
-    "node": "10.x"
-    },
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "quick.db": "^7.1.2"
   }
 }

@@ -62,6 +62,9 @@ client.on("message", message => {
   if (command === "reaction") {
     client.commands.get("reaction").execute(message, args);
   }
+  if(command === "urban"){
+  client.commands.get("wikipedia").execute(message, args);
+    }
   // [INFO COMMAND]]
   if (command === "info-server") {
     client.commands.get("info-server").execute(message, args);

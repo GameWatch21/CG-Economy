@@ -17,6 +17,7 @@ module.exports = {
     }
 }
      const user = getUser(args[0]) || message.member;
+    const check = db.fetch(`class_check.${user.id}`);
     const classes = db.fetch(`class.${user.id}`);
     const money = db.fetch(`money.${user.id}`) || 0;
     const mined = db.fetch(`mined.${user.id}`) || 0;
@@ -24,6 +25,9 @@ module.exports = {
     const crafted = db.fetch(`crafted.${user.id}`) || 0;
     const works = db.fetch(`worked.${user.id}`) || 0;
     
+    if(check == "no"){
+      message.channel.send("You need to register first!\nUse `g!register` to be able to use this command");
+      }
     
    /*  message.channel.send("This command will come soon, so be patience, im working on it"); */
     if(classes == "miner"){

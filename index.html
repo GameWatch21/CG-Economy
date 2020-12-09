@@ -10,12 +10,17 @@
   <!--
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+  </script>
 </head>
 <body>
   <style>
+    html{
+      scroll-behavior: smooth
+      }
     body{
       background-color:#2F4F4F;
       }
@@ -27,6 +32,10 @@
       }
     .panel-group{
       color:black;
+      }
+    .info{
+      color:black;
+      background-color:white;
       }
     footer{
       color:white;
@@ -47,16 +56,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/index.html">CodeGround</a>
+      <a class="navbar-brand" href="#home">CodeGround</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
         
-        <li><a href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&permissions=8&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&scope=bot">Invite the Bot</a></li>
-        <!--
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li> -->
+        <li><a href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&permissions=8&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&scope=bot"><i class="glyphicon glyphicon-download"></i> Invite the Bot</a></li>
+        
+        <li><a href="#commands"><i class="glyphicon glyphicon-console"></i> Commands</a></li>
+       <!-- <li><a href="#">Page 3</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -65,11 +74,13 @@
     </div>
   </div>
 </nav>
-  <div class="jumbotron text-center">
+  <div class="jumbotron jumbotron-fluid text-center" id="home">
+    <div class="container">
   <h1>New Website coming soon!</h1> 
     <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
     <p>This website will be a website for bot name <kbd>Strelitzia</kbd>, and also will be my personal Website
      </p>
+      </div>
 	</div>
   
   <div class="logining">
@@ -78,7 +89,20 @@
   <!--  <div class="join-guild">
       Join <a id="invite" style="button" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=guilds.join">Our Guild</a> So you didnt miss out great news and updates
       </div> -->
-  <div class="commands">
+  <div class="info" id="info">
+    <div class="card">
+    <h4 class="card-title">Information</h4>
+    <p class="card-text">Welcome to CodeGround Website, where you can see all my works :)</p>
+    <p class="card-text">I already make some Discord Bot (i didnt verify the bot, so you can copy the source code)</p>
+    <p class="card-text">CodeGround is created by <kbd>GameWatch21</kbd>, it's purpose is to train myself to become a coder</p>
+    <p class="card-text">Actually this is like a hobby.. wait no i mean free time work, so the project isnt fully working, probably there is a bug or problem, since i also want to train myself</p>
+    <p class="card-text">With this website, i can also see my own achievement and what i already done</p>
+    <a href="#" class="card-link">Join our Discord Server</a>
+    <a href="#" class="card-link">Strelitzia Github Link</a>
+  </div>
+</div>
+    
+  <div class="commands" id="commands">
     <h3>List of Commands</h3>
   <div class="panel-group" id="accordion">
   <div class="panel panel-default">
@@ -89,7 +113,7 @@
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">Give the Help page for all the command list<p>Usage: <kbd>g!help</kbd></p><p>Aliases: [NONE]</p></div>
+      <div class="panel-body">Give the Help page for all the command list<p>Usage: <kbd>s!help</kbd></p><p>Aliases: [NONE]</p></div>
     </div>
   </div>
   <div class="panel panel-default">
@@ -112,6 +136,28 @@
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">Pruning or Deleting message on a channel<p>Usage: <kbd>s!prune [AMOUNT]</kbd></p></div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        <kbd>s!register</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">Register to the economy Games, Choose a class and start playing<p>Usage: <kbd>s!register | s!register [CLASS]</kbd></p><p>Aliases: s!reg</p></div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        <kbd>s!profile</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">Check your profile game, If you already register, you can view your profile, oh also you can check someone profile too<p>Usage: <kbd>s!profile | s!profile [USER]</kbd></p><p>Aliases: s!pro</p></div>
     </div>
   </div>
 </div>

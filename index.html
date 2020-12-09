@@ -21,6 +21,105 @@
     html{
       scroll-behavior: smooth
       }
+   /* .loader{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.5s;
+}
+.loader .ring{
+  height: 45px;
+  width: 45px;
+  border: 5px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .ring:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #ff3d00;
+  border-top-color: transparent;
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+ /*   #loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+ 
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+    #loader {
+    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+/*}
+h1 {
+    color: #EEEEEE;
+}
+    .loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+ /*   -ms-transform: translateX(-100%);  /* IE 9 */
+/*    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+/*}
+ 
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  /*  -ms-transform: translateX(100%);  /* IE 9 */
+ /*   transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+/*}
+    .loaded #loader {
+    opacity: 0;
+}
+    .loaded #loader-wrapper {
+    visibility: hidden;
+}
+    .loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+    .loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.3s 0.3s ease-out;
+            transition: all 0.3s 0.3s ease-out;
+}
+    .loaded #loader-wrapper {
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+ 
+        -webkit-transition: all 0.3s 0.6s ease-out;
+                transition: all 0.3s 0.6s ease-out;
+}
+    .no-js #loader-wrapper {
+    display: none;
+}
+.no-js h1 {
+    color: #222222;
+} */
     body{
       background-color:#2F4F4F;
       }
@@ -86,6 +185,17 @@ body.dark-theme a {
     
       
   </style>
+ <!-- <div class="loader">
+      <div class="ring">
+</div>
+</div>
+ <div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div> -->
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -116,8 +226,8 @@ body.dark-theme a {
   <h1>New Website coming soon!</h1> 
     <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
     <p>This website will be a website for bot name <kbd>Strelitzia</kbd>, and also will be my personal Website
-     </p>
-     <p> <button class="btn-toggle">Toggle Dark-Mode</button> </p>
+     </p> 
+     <p> <button class="btn-toggle"><i class="glyphicon glyphicon-adjust"></i> Toggle Dark-Mode</button> </p>
       </div>
     
       <script>
@@ -139,13 +249,13 @@ btn.addEventListener("click", function () {
   <div class="info" id="info">
     <div class="card">
     <h4 class="card-title">Information</h4>
-    <p class="card-text">Welcome to CodeGround Website, where you can see all my works :)</p>
+  <p class="card-text">Welcome to CodeGround Website, where you can see all my works :)</p>
     <p class="card-text">I already make some Discord Bot (i didnt verify the bot, so you can copy the source code)</p>
     <p class="card-text">CodeGround is created by <kbd>GameWatch21</kbd>, it's purpose is to train myself to become a coder</p>
     <p class="card-text">Actually this is like a hobby.. wait no i mean free time work, so the project isnt fully working, probably there is a bug or problem, since i also want to train myself</p>
-    <p class="card-text">With this website, i can also see my own achievement and what i already done</p>
-    <a href="#" class="card-link">Join our Discord Server</a>
-    <a href="#" class="card-link">Strelitzia Github Link</a>
+    <p class="card-text">With this website, i can also see my own achievement and what i already done</p> 
+    <p><a href="https://discord.gg/ASHGkue" class="card-link" style="button">Join our Discord Server</a></p>
+  <p>  <a href="#" class="card-link">Strelitzia Github Link</a></p>
   </div>
 </div>
     

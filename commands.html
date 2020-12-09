@@ -22,24 +22,8 @@
     .join-guild{
       color:white;
       }
-    .commands{
-      color:white; 
-      }
-    .panel-group{
-      color:black;
-      }
-    footer{
-      color:white;
-      background-color:black;
-      width: 300px;
-  margin: auto;
-  border: 1px solid red;
-      text-align:center
-      }
-    
-      
   </style>
- <nav class="navbar navbar-inverse navbar-fixed-top">
+ <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -66,58 +50,16 @@
   </div>
 </nav>
   <div class="jumbotron text-center">
-  <h1>New Website coming soon!</h1> 
-    <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
+  <h1>Commands Page!</h1> 
+    <p>Hello, CodordGround website will coming soon, so stay Tune :)</p>
 	</div>
-  
   <div class="logining">
 	<a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify">Identify Yourself</a>
     </div>
-  <!--  <div class="join-guild">
+    <div class="join-guild">
       Join <a id="invite" style="button" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=guilds.join">Our Guild</a> So you didnt miss out great news and updates
-      </div> -->
-  <div class="commands">
-    <h3>List of Commands</h3>
-  <div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        <kbd>s!help</kbd></a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">Give the Help page for all the command list<p>Usage: <kbd>g!help</kbd></p><p>Aliases: [NONE]</p></div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        <kbd>s!avatar</kbd></a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">Showing Your, or someone avatar(s)<p>Usage: <kbd>s!avatar [USER]</kbd></p></div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        <kbd>s!prune</kbd></a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">Pruning or Deleting message on a channel<p>Usage: <kbd>s!prune [AMOUNT]</kbd></p></div>
-    </div>
-  </div>
-</div>
-</div>
-  <footer>
-    <p>Created by <kbd>GameWatch21</kbd></p>
-    </footer>
-    <script>
+      </div>
+  <script>
 		function generateRandomString() {
 			const rand = Math.floor(Math.random() * 10);
 			let randStr = '';

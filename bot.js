@@ -11,6 +11,7 @@ client.commands = new Discord.Collection();
 http.createServer((req, res) => {
 	let responseCode = 404;
 	let content = '404 Error';
+  let content2 = '404 Error';
 
 	const urlObj = url.parse(req.url, true);
 
@@ -48,8 +49,8 @@ http.createServer((req, res) => {
 
 	if (urlObj.pathname === '/') {
 		responseCode = 200;
-		content = fs.readFileSync('./index.html');
-	}
+		content = fs.readFileSync('./index.html')
+  }
 
 	res.writeHead(responseCode, {
 		'content-type': 'text/html;charset=utf-8',

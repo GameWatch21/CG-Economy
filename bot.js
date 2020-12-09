@@ -24,9 +24,7 @@ http.createServer((req, res) => {
 			redirect_uri: 'https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify',
 			code: accessCode,
 			scope: 'the scopes',
-		};
-
-		fetch('https://discord.com/api/oauth2/token', {
+		};  	fetch('https://discord.com/api/oauth2/token', {
 			method: 'POST',
 			body: new URLSearchParams(data),
 			headers: {

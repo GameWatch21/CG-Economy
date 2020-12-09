@@ -1,6 +1,6 @@
 {
   "name": "codeground",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Was a test project to make us a better coder",
   "main": "bot.js",
   "engines": {

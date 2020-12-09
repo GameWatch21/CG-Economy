@@ -11,11 +11,11 @@ The checked one, mean it's already working, for the others, i dont know when i w
 - [x] Making an Embed message working (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Making Purne Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Make backend code more dynamic, not that dynamic,i  use my own style to write codes even it's bad (Thursday, 26 Novermber 2020 by **_GameWatch21_**)
-- [ ] Add avatar command
+- [x] Add avatar command (Wednesday, 8 December 2020 by **_GameWatch21_**)
 - [ ] Create Status for bot
 - [ ] Making an Economy Games [This one is different, will be on differeny section]
 - [ ] Make an Moderation commands
-- [ ] Make an Website for the bot
+- [x] Make an Website for the bot (Wednesday, 8 December 2020 by **_GameWatch21_**)
 - [ ] Add music feature to the bot
 - [ ] Brainstorming New Features
 

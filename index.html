@@ -37,6 +37,43 @@
       color:black;
       background-color:white;
       }
+    body.dark-theme {
+  color: white;
+  background: #121212;
+}
+  body.dark-theme .container{
+   background-color: black;
+    }
+   body.dark-theme .info{
+     color: white;
+     background-color:black;
+     }
+    body.dark-theme .commands{
+      color: white;
+      background-color: black;
+      }
+    body.dark-theme .panel-group{
+      color: white;
+      background-color: black;
+      }
+    body.dark-theme .panel-body{
+      color: white;
+      background-color: black;
+      }
+    body.dark-theme .panel-heading{
+      color: white;
+      background-color: black;
+      }
+    body.dark-theme .btn-toggle{
+      color: white;
+      background-color: black;
+      }
+a {
+  color: #0033cc;
+}
+body.dark-theme a {
+  color: #809fff;
+}
     footer{
       color:white;
       background-color:black;
@@ -80,12 +117,20 @@
     <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
     <p>This website will be a website for bot name <kbd>Strelitzia</kbd>, and also will be my personal Website
      </p>
+     <p> <button class="btn-toggle">Toggle Dark-Mode</button> </p>
+      <script>
+        const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+});
+      </script> 
       </div>
 	</div>
   
-  <div class="logining">
+ <!-- <div class="logining">
 	<a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify">Identify Yourself</a>
-    </div>
+    </div> --
   <!--  <div class="join-guild">
       Join <a id="invite" style="button" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=guilds.join">Our Guild</a> So you didnt miss out great news and updates
       </div> -->
@@ -165,6 +210,8 @@
   <footer>
     <p>Created by <kbd>GameWatch21</kbd></p>
     </footer>
+    <!--    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a> -->
+        
     <script>
 		function generateRandomString() {
 			const rand = Math.floor(Math.random() * 10);
@@ -212,6 +259,9 @@
 				document.getElementById('login').style.display = 'block';
 			}
 		}
+  <!--   const btn = document.querySelector(".btn-toggle");
+<!-- btn.addEventListener("click", function () {
+ <!-- document.body.classList.toggle("dark-theme");
     static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
@@ -228,6 +278,18 @@
     discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
     Discord_UpdatePresence(&discordPresence);
 }
+   /*   $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            }); */
 	</script>
 </body>
 </html>

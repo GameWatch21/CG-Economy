@@ -41,7 +41,7 @@
   color: white;
   background: #121212;
 }
-  body.dark-theme .container{
+  body.dark-theme .jumbotron{
    background-color: black;
     }
    body.dark-theme .info{
@@ -112,12 +112,13 @@ body.dark-theme a {
   </div>
 </nav>
   <div class="jumbotron jumbotron-fluid text-center" id="home">
-    <div class="container">
   <h1>New Website coming soon!</h1> 
     <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
     <p>This website will be a website for bot name <kbd>Strelitzia</kbd>, and also will be my personal Website
      </p>
      <p> <button class="btn-toggle">Toggle Dark-Mode</button> </p>
+      </div>
+    
       <script>
         const btn = document.querySelector(".btn-toggle");
 
@@ -125,8 +126,8 @@ btn.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
 });
       </script> 
-      </div>
-	</div>
+    <!--  </div>
+	</div> -->
   
  <!-- <div class="logining">
 	<a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify">Identify Yourself</a>

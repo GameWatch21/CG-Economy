@@ -2,6 +2,11 @@
 A Discord Bot for coding Ground
 Roughly, this bot is created to train myself to code a discord bot myself, actually not myself, i also learn code and learn guides on other website too, such as [DiscordJs Guide](https://discordjs.guide)
 Also, Join our [Discord Server](https://discord.gg/ASHGkue) so it's easy to meet me and ask something, actually im not your teacher so i will not teach you 😂
+
+At Wednesday 8 December, i make website for CodeGround, actually sorry for the bad css, i'm bad at choosing style and animation, so it's still in maintenance and probably never going to publish it to global but here if you want
+[CodeGround Website](https://codeground.glitch.me)
+
+If it offline, please wait a minute till it load :) thank you
 ## Working Log
 Here are my **Working Log** that i need to work on and not hopefully work, but i must make it work
 The checked one, mean it's already working, for the others, i dont know when i will finish it, but i will finish it soon

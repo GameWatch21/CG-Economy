@@ -30,6 +30,7 @@ module.exports = {
       }
     
    /*  message.channel.send("This command will come soon, so be patience, im working on it"); */
+    if(check == "registered"){
     if(classes == "miner"){
       const miner_embed = new Discord.MessageEmbed()
   .setTitle(`${user.user.tag}'s Profile`)
@@ -88,6 +89,6 @@ module.exports = {
       .setColor("YELLOW");
      message.channel.send(crafter_embed)
      }
-      
+      }
     }
   }

@@ -7,6 +7,17 @@ At Wednesday 8 December, i make website for CodeGround, actually sorry for the b
 [CodeGround Website](https://codeground.glitch.me)
 If it offline, please wait a minute till it load :) thank you
 
+Before this, i use glitch.com as my personal Coding space and as github uploder
+But at Wednesday, 16 December, i decide to use repl.it for my coding space, it's also because of the free hosting and mobile friendly (not really, but i for me i already code easier)
+
+If you want to help me building project, or you have a project that are forked from my code, or you got motivation from my code, you can send your github link and i will list the project
+
+If you found that my code is different from other, it's normal, we have different "client" different "variable" and etc
+
+I will be posting the installation guide soon but, you only need to make ".env" file and copy this text
+`TOKEN =  [your token]`
+`F_CREDIT = Created by GameWatch21`
+The complete installation guide will be posted soon
 
 ## Working Log
 Here are my **Working Log** that i need to work on and not hopefully work, but i must make it work

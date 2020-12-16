@@ -4,7 +4,7 @@ Roughly, this bot is created to train myself to code a discord bot myself, actua
 Also, Join our [Discord Server](https://discord.gg/ASHGkue) so it's easy to meet me and ask something, actually im not your teacher so i will not teach you 😂
 
 At Wednesday 8 December, i make website for CodeGround, actually sorry for the bad css, i'm bad at choosing style and animation, so it's still in maintenance and probably never going to publish it to global but here if you want
-[CodeGround Website](https://codeground.glitch.me)
+[CodeGround Website](https://cg-economy.gamewatch21.repl.co/)
 If it offline, please wait a minute till it load :) thank you
 
 Before this, i use glitch.com as my personal Coding space and as github uploder

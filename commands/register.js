@@ -9,10 +9,10 @@ module.exports = {
     var economy = args[0];
     var class_check = db.fetch(`class_check.${message.author.id}`) || "no";
     if(!economy){
-      message.channel.send("Hello, please choose what class you want to join, These are the classes:\n• Miner\n• Farmer\n• Worker\n• Crafter\nThen use `s!register [class]` to join the game\nAnd last, Have Fun")
+      message.reply("Hello, please choose what class you want to join, These are the classes:\n• Miner\n• Farmer\n• Worker\n• Crafter\nThen use `s!register [class]` to join the game\nAnd last, Have Fun")
       }
     if(class_check == "registered"){
-      message.channel.send("You have already choose a class and register, You can check your profile using `s!profile`");
+      message.reply("You have already choose a class and register, You can check your profile using `s!profile`");
       }
     if(class_check == "no"){
    if(args[0] == "miner"){

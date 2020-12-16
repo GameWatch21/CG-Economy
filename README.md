@@ -5,8 +5,9 @@ Also, Join our [Discord Server](https://discord.gg/ASHGkue) so it's easy to meet
 
 At Wednesday 8 December, i make website for CodeGround, actually sorry for the bad css, i'm bad at choosing style and animation, so it's still in maintenance and probably never going to publish it to global but here if you want
 [CodeGround Website](https://codeground.glitch.me)
-
 If it offline, please wait a minute till it load :) thank you
+
+
 ## Working Log
 Here are my **Working Log** that i need to work on and not hopefully work, but i must make it work
 The checked one, mean it's already working, for the others, i dont know when i will finish it, but i will finish it soon
@@ -17,7 +18,7 @@ The checked one, mean it's already working, for the others, i dont know when i w
 - [x] Making Purne Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Make backend code more dynamic, not that dynamic,i  use my own style to write codes even it's bad (Thursday, 26 Novermber 2020 by **_GameWatch21_**)
 - [x] Add avatar command (Wednesday, 8 December 2020 by **_GameWatch21_**)
-- [ ] Create Status for bot
+- [x] Create Status for bot (Wednesday, 16 December 2020 by **_GameWatch21_**)
 - [ ] Making an Economy Games [This one is different, will be on differeny section]
 - [ ] Make an Moderation commands
 - [x] Make an Website for the bot (Wednesday, 8 December 2020 by **_GameWatch21_**)
@@ -59,3 +60,8 @@ If you found out a bug, or something that's weird on the code, just open a issue
 
 ## 🍴For Forking
 Feel free to fork my code, it's free and you can edit with your own style, well i didnt explain well the code what's the section is, what's this used for, so you will need to explore it yourself, you can decide you want to use my credits or no, i dont care just do whatever you want i will try to make new command and code as my free time
+
+## 🛠️Other Project
+There is other project i work on, even though, i still make the project as an open source, so probably you want to fork it, or you have better idea than mine
+You can easily fork it and use it, no need installation guide :)
+

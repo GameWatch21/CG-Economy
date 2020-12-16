@@ -71,14 +71,10 @@ client.once("ready", () => {
   console.log(
     "Yup im online, and im ready to work"
     );
-  client.user.setActivity(`s!help | ${client.guilds.size} servers.`), {
+  client.user.setActivity(`s!help`), {
     type: "playing"
     };
- /* }
-client.once =
-  ("ready",
-  () => {
-    console.log("Ah, it's time for work"); */
+ 
   }); 
 
 client.on("message", message => {

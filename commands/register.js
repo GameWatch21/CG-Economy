@@ -22,7 +22,8 @@ module.exports = {
     .setTimestamp()
     .setFooter(process.env.F_CREDITS)
      .setColor("GREEN");
-     db.set(`class.${message.author.id}`, "Miner"); db.set(`class_check.${message.author.id}` , "registered");
+     db.set(`class.${message.author.id}`, "Miner"); 
+     db.set(`class_check.${message.author.id}` , "registered");
      message.channel.send(miner_embed);
      }
     if(args[0] == "farmer"){
@@ -33,7 +34,8 @@ module.exports = {
     .setFooter(process.env.F_CREDITS)
      .setColor("GREEN");
       
-      db.set(`class.${message.author.id}`, "Farmer"); db.set(`class_check.${message.author.id}` , "registered");
+      db.set(`class.${message.author.id}`, "Farmer"); 
+      db.set(`class_check.${message.author.id}` , "registered");
      message.channel.send(farmer_embed/*"Congratulation, you choose the `Farmer` class\nNow you can check your profile with `s!profile`\nFuther Information about `Farmer` class, check with `s!help farmer`"*/);
      }
     if(args[0] == "crafter"){
@@ -43,7 +45,8 @@ const crafter_embed = new Discord.MessageEmbed()
     .setTimestamp()
     .setFooter(process.env.F_CREDITS)
      .setColor("GREEN");
-      db.set(`class.${message.author.id}`, "Crafter"); db.set(`class_check.${message.author.id}` , "registered");
+      db.set(`class.${message.author.id}`, "Crafter"); 
+      db.set(`class_check.${message.author.id}` , "registered");
      message.channel.send(crafter_embed/*"Congratulation, you choose the `Crafter` class\nNow you can check your profile with `s!profile`\nFuther Information about `Crafter` class, check with `s!help crafter`"*/);
      }
     if(args[0] == "worker"){
@@ -53,7 +56,8 @@ const crafter_embed = new Discord.MessageEmbed()
     .setTimestamp()
     .setFooter(process.env.F_CREDITS)
      .setColor("GREEN"); 
-      db.set(`class.${message.author.id}`, "Worker"); db.set(`class_check.${message.author.id}` , "registered");
+      db.set(`class.${message.author.id}`, "Worker"); 
+      db.set(`class_check.${message.author.id}` , "registered");
      message.channel.send(worker_embed/*"Congratulation, you choose the `Worker` class\nNow you can check your profile with `s!profile`\nFuther Information about `Worker` class, check with `s!help worker`"*/);
      }
     }

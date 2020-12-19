@@ -11,11 +11,9 @@ module.exports = {
  // .setAuthor(`${message.author}`, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
   .setDescription('You choose the legendary Thumb up')
 // .setThumbnail(`${message.guild.icon}`)
-  .addField(
+  .addFields(
     { name: 'Just about you and me, you will get', value: `You get $100 by reacting`},
    )
-  //.addField('Inline field title', 'Some value here', true)
-// .setImage(`${message.guild.icon}`)
   .setTimestamp()
   .setFooter('Created by GameWatch21 | Nah this one, is in Prototype');
       

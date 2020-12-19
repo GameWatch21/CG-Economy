@@ -1,7 +1,7 @@
 const http = require("http");
 const port = 8080;
 const url = require('url');
-const fetch = require('node-fetch');
+const fetchs = require('node-fetch');
 const fs = require("fs");
 const Discord = require("discord.js");
 const { prefix , token } = require("./config.json");

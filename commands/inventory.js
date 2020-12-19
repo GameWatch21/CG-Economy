@@ -6,7 +6,7 @@ module.exports = {
   description: "Check your inventort for each class",
   aliases: ["inv" , "backpack"],
   execute(message, args){
-    const check = db.fetch(`class_check.${message.author.id}`);
+    const check = db.fetch(`class_check.${message.author.id}`) || "no";
     const classes = db.fetch(`class.${message.author.id}`);
     // ======================
     // MINER CLASS DATABASE
@@ -43,6 +43,24 @@ module.exports = {
     const hoe = db.fetch(`hoe.${message.author.id}`);
     const pickaxe = db.fetch(`rank.${message.author.id}`);
     const shovel = db.fetch(`shovel.${message.author.id}`);
+    if(class_check == "no"){
+      message.reply("You didnt register yet, use `s!register` to register");
+    }
+    if(class_check == "yes"){
+      if(clases == "Miner" ){
+        // NOT YET
+      }
+      if(classes == "Farmer"){
+        // NOT YET
+      }
+      if(classes == "Worker"){
+        // NOT YET
+      }
+      if(classes == "Crafter"){
+        // NOT YET
+      }
+      
+    }
     
   }
 }

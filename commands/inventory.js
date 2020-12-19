@@ -35,7 +35,7 @@ module.exports = {
     // ======================
     const reputation = db.fetch(`reputation.${message.author.id}`) || 0;
     const energy = db.fetch(`energy.${message.author.id}`) || 0;
-    const experience = db.fetch(`land.${message.author.id}`) || 0;
+    const experience = db.fetch(`energy.${message.author.id}`) || 0;
     const rank = db.fetch(`rank.${message.author.id}`) || 0;
     // ======================
     // CRAFTER CLASS DATABASE (complicated cause i need to mix between farmer and miner class)
@@ -47,13 +47,13 @@ module.exports = {
     // END OF DATABASE
     // ======================
     
-    if(class_check == "no"){
+    if(check == "no"){
       message.reply("You didnt register yet, use `s!register` to register");
     }
-    if(class_check == "yes"){
-      if(clases == "Miner" ){
+    if(check == "registered"){
+      if(classes == "Miner" ){
         const embed = new Discord.MessageEmbed()
-        .setTitle(`$(message.author.tag}'s Inventory`)
+        .setTitle(`${message.author.tag}'s Inventory`)
         .addFields(
           {name: `Stone:` , value: `${stone}`},
           {name: `Coal:` , value: `${coal}`},
@@ -72,13 +72,61 @@ module.exports = {
         
       }
       if(classes == "Farmer"){
-        // NOT YET
+        const embed = new Discord.MessageEmbed()
+        .setTitle(`${message.author.tag}'s Inventory`)
+        .addFields(
+          {name: `Seed:` , value: `${seed}`},
+          {name: `Land:` , value: `${land}`},
+          {name: `Fertilizer:` , value: `${fertilizer}`},
+          {name: `Wheat:` , value: `${wheat}`},
+          {name: `Carrot:` , value: `${carrot}`},
+          {name: `Potato:` , value: `${potato}`},
+          {name: `Log:` , value: `${log}`}
+          /*{name: `Gold:` , value: `${gold}`},
+          {name: `Diamond` , value: `${diamond}`}*/
+          )
+          .setTimestamp()
+          .setColor("RANDOM");
+          
+          message.channel.send(embed);
       }
       if(classes == "Worker"){
-        // NOT YET
+        const embed = new Discord.MessageEmbed()
+        .setTitle(`${message.author.tag}'s Inventory`)
+        .addFields(
+          {name: `Reputation:` , value: `${reputation}`},
+          {name: `Experience:` , value: `${experience}`},
+          {name: `Energy:` , value: `${energy}`},
+          {name: `Rank:` , value: `${rank}`}/*,
+          {name: `Gold Ore:` , value: `${gold_ore}`},
+          {name: `Diamond Ore:` , value: `${diamond_ore}`},
+          {name: `Iron:` , value: `${iron}`},
+          {name: `Gold:` , value: `${gold}`},
+          {name: `Diamond` , value: `${diamond}`}*/
+          )
+          .setTimestamp()
+          .setColor("RANDOM");
+          
+          message.channel.send(embed);
       }
       if(classes == "Crafter"){
-        // NOT YET
+        const embed = new Discord.MessageEmbed()
+        .setTitle(`${message.author.tag}'s Inventory`)
+        .addFields(
+          {name: `Axe:` , value: `${axe}`},
+          {name: `Pickaxe:` , value: `${pickaxe}`},
+          {name: `hoe:` , value: `${hoe}`},
+          {name: `Shovel:` , value: `${shovel}`}/*,
+          {name: `Gold Ore:` , value: `${gold_ore}`},
+          {name: `Diamond Ore:` , value: `${diamond_ore}`},
+          {name: `Iron:` , value: `${iron}`},
+          {name: `Gold:` , value: `${gold}`},
+          {name: `Diamond` , value: `${diamond}`}*/
+          )
+          .setTimestamp()
+          .setColor("RANDOM");
+          
+          message.channel.send(embed);
       }
       
     }

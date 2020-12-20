@@ -34,8 +34,9 @@ module.exports = {
     // WORKER CLASS DATABASE (most fantasy inventory ever)
     // ======================
     const reputation = db.fetch(`reputation.${message.author.id}`) || 0;
+    // ENERGY WILL BE GLOBAL THING
     const energy = db.fetch(`energy.${message.author.id}`) || 0;
-    const experience = db.fetch(`energy.${message.author.id}`) || 0;
+    const experience = db.fetch(`experience.${message.author.id}`) || 0;
     const rank = db.fetch(`rank.${message.author.id}`) || 0;
     // ======================
     // CRAFTER CLASS DATABASE (complicated cause i need to mix between farmer and miner class)
@@ -113,7 +114,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         .setTitle(`${message.author.tag}'s Inventory`)
         .addFields(
-          {name: `Axe:` , value: `${axe}`},
+         /* {name: `Axe:` , value: `${axe}`},*/
           {name: `Pickaxe:` , value: `${pickaxe}`},
           {name: `hoe:` , value: `${hoe}`},
           {name: `Shovel:` , value: `${shovel}`}/*,

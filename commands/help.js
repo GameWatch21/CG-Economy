@@ -7,11 +7,11 @@ module.exports = {
   execute(message, args){
     
     const helpEmbed = new Discord.MessageEmbed()
-    .setTitle(`${message.author}, Help Commands Page 1/1`)
+    .setTitle(`${message.author.tag}, Help Commands Page 1/1`)
     .setDescription(`Here are the commands:`)
     .setColor('RANDOM')
  .addFields(
-      {name:`${process.env.PREFIX}!ping` , value:'Checking if the bot are online or offline' , inline: true},
+      {name:`${process.env.PREFIX}ping` , value:'Checking if the bot are online or offline' , inline: true},
   
    {name: `${process.env.PREFIX}info-server` , value: 'Giving the Server Information', inline: true},
       {name: `${process.env.PREFIX}prune` , value: 'Deleting/Pruning messages' , inline: true},

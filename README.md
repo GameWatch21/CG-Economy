@@ -75,4 +75,4 @@ Feel free to fork my code, it's free and you can edit with your own style, well 
 ## 🛠️Other Project
 There is other project i work on, even though, i still make the project as an open source, so probably you want to fork it, or you have better idea than mine
 You can easily fork it and use it, no need installation guide :)
-
+- [Discord Faucet Bot](https://github.com/GameWatch21/faucet-bot) | A fork from CG-Economy, turn into a cryptocurrency faucet bot

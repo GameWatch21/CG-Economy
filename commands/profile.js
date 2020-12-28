@@ -26,6 +26,7 @@ module.exports = {
     const harvest = db.fetch(`harvest.${message.author.id}`) || 0;
     const crafted = db.fetch(`crafted.${message.author.id}`) || 0;
     const works = db.fetch(`worked.${message.author.id}`) || 0;
+    const energy = db.fetch(`energy.${message.author.id}`) || 0;
     
     if(check == "no"){
       message.channel.send("You need to register first!\nUse `g!register` to be able to use this command");
@@ -108,7 +109,8 @@ if(check == "registered"){
   .addFields(
       {name: "Class:" , value: classes},
       {name: "Money:" , value: money , inline: true},
-      {name: "Mines:" , value: mined , inline: true}
+      {name: "Mines:" , value: mined , inline: true},
+      {name: "Energy:" , value: energy , inline: true}
       )
   .setTimestamp()
   .setFooter(process.env.F_CREDITS)
@@ -122,7 +124,8 @@ if(check == "registered"){
       .addFields(
       {name: "Class:" , value: classes},
       {name: "Money:" , value: money , inline: true},
-      {name: "Harvest:" , value: harvest , inline: true}
+      {name: "Harvest:" , value: harvest , inline: true},
+      {name: "Energy:" , value: energy , inline: true}
       )
       .setTimestamp()
       .setFooter(process.env.F_CREDITS)
@@ -136,7 +139,8 @@ if(check == "registered"){
       .addFields(
       {name: "Class:" , value: classes},
       {name: "Money:" , value: money , inline: true},
-      {name: "Works" , value: works  , inline: true}
+      {name: "Works" , value: works  , inline: true},
+      {name: "Energy:" , value: energy , inline: true}
       )
       .setTimestamp()
       .setFooter(process.env.F_CREDITS)
@@ -151,7 +155,8 @@ if(check == "registered"){
       .addFields(
       {name: "Class:" , value: classes},
       {name: "Money:" , value: money , inline: true},
-      {name: "Item Crafted:" , value: crafted , inline: true}
+      {name: "Item Crafted:" , value: crafted , inline: true},
+      {name: "Energy:" , value: energy , inline: true}
       )
       .setTimestamp()
       .setFooter(process.env.F_CREDITS)

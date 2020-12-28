@@ -82,9 +82,10 @@ module.exports = {
           {name: `Wheat:` , value: `${wheat}`},
           {name: `Carrot:` , value: `${carrot}`},
           {name: `Potato:` , value: `${potato}`},
-          {name: `Log:` , value: `${log}`}
-          /*{name: `Gold:` , value: `${gold}`},
-          {name: `Diamond` , value: `${diamond}`}*/
+          {name: `Log:` , value: `${log}`},
+          
+         {name: `Shovel:` , value: `${shovel}`}
+          /*{name: `Diamond` , value: `${diamond}`}*/
           )
           .setTimestamp()
           .setColor("RANDOM");

@@ -1,7 +1,7 @@
 {
   "name": "CodeGround",
   "short_name": "CodeGround",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
   "description": "A Website for Private Code Playground",

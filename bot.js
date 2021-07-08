@@ -103,51 +103,7 @@ client.on("message", message => {
     message.reply("there was an error trying to execute that command!");
   }
 
-  // [BASIC COMMANDS]
-  if (command === "ping") {
-    client.commands.get("ping").execute(message, args);
-  }
-  if (command === "say") {
-    message.channel.send(`${args}`);
-  }
-  if (command === "im") {
-    client.commands.get("im").execute(message, args);
-  }
-  if (command === "reaction") {
-    client.commands.get("reaction").execute(message, args);
-  }
-  if(command === "urban"){
-  client.commands.get("wikipedia").execute(message, args);
-    }
-  // [INFO COMMAND]]
-  if (command === "info-server") {
-    client.commands.get("info-server").execute(message, args);
-  }
-  if (command === "avatar") {
-    client.commands.get("avatar").execute(message, args);
-  }
-  // [BOT COMMAND]
-  if (command === "uptime") {
-    client.commands.get("uptime").execute(message, args);
-  }
-  if (command === "help") {
-    client.commands.get("help").execute(message, args);
-  }
-  // [MODERATION COMMAND]
-  if (command === "prune") {
-    client.commands.get("prune").execute(message, args);
-  }
-  // [ECONOMY COMMAND]
-  if (command === "register"){
-  client.commands.get("register").execute(message, args);
-    }
-  if(command === "restart"){
-    client.commands.get("restart").execute(message, args);
-    }
-  // [ADMIN COMMAND]
-  if (command === "reload") {
-    client.commands.get("reload").execute(message, args);
-  }
+  
 });
 
 client.login(process.env.TOKEN);

@@ -4,10 +4,10 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ glitch ]
+
   pull_request:
-    branches: [ glitch ]
+     paths-ignore: 
+         - '*.md'
 
 jobs:
   build:

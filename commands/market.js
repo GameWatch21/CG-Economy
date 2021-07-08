@@ -42,7 +42,7 @@ module.exports = {
     // CRAFTER CLASS DATABASE (complicated cause i need to mix between farmer and miner class)
     // ======================
     const hoe = db.fetch(`hoe.${message.author.id}`) || 0;
-    const pickaxe = db.fetch(`pickaxe.${message.author.id}`) || 0;
+    const pickaxe = db.fetch(`rank.${message.author.id}`) || 0;
     const shovel = db.fetch(`shovel.${message.author.id}`) || 0;
     // ======================
     // END OF USER DATABASE 
@@ -76,27 +76,12 @@ module.exports = {
    // ======================
     // CRAFTER CLASS DATABASE (complicated cause i need to mix between farmer and miner class)
     // ======================
-    const hoe_market = db.fetch(`hoe`) || 0;
-    const pickaxe_market = db.fetch(`pickaxe`) || 0;
-    const shovel_market = db.fetch(`shovel`) || 0;
+    const hoe_market = db.fetch(`hoe.${message.author.id}`) || 0;
+    const pickaxe_market = db.fetch(`rank.${message.author.id}`) || 0;
+    const shovel_market = db.fetch(`shovel.${message.author.id}`) || 0;
     // ======================
-    // END OF MARKET DATABASE
+    // END OF DATABASE
     // ======================
-    const option = args[0];
-    const item = args[1];
-    const amount = args[2];
-    const money = db.fetch(`money.${message.author.id}`) || 0;
     
-    if(option.toLowerCase() == "sell"){
-      if(!item){
-       message.reply("What item you want to sell?");
-      }
-      if(!amount){
-        
-      }
-    }
-    if(option.toLowerCase() == "buy"){
-      
-    }
   }
 }

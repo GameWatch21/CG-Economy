@@ -42,7 +42,7 @@ module.exports = {
     // CRAFTER CLASS DATABASE (complicated cause i need to mix between farmer and miner class)
     // ======================
     const hoe = db.fetch(`hoe.${message.author.id}`) || 0;
-    const pickaxe = db.fetch(`pickaxe.${message.author.id}`) || 0;
+    const pickaxe = db.fetch(`rank.${message.author.id}`) || 0;
     const shovel = db.fetch(`shovel.${message.author.id}`) || 0;
     // ======================
     // END OF DATABASE

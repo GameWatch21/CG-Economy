@@ -4,6 +4,8 @@ const userSchema = require("./schema/user.js"),
 guildSchema = require("./schema/guild.js"),
 memberSchema = require("./schema/member.js"),
 logSchema = require("./schema/log.js");
+economgSchema = require("./schema/economy.js");
+
 
 //Create/find users Database
 module.exports.fetchUser = async function(key){
@@ -67,4 +69,19 @@ module.exports.createLog = async function(message, data){
     await logDB.save().catch(err => console.log(err));
     return;
 
+};
+module.exports.fetchEconomy = async function(userID, guildID){
+
+    let ecoDB = await memberSchema.findOne({ id: userID, guildID: guildID });
+    if(ecoDB){
+        return ecoDB;
+    }else{
+        ecoDB = new memberSchema({
+            id: userID,
+            guildID: guildID,
+            registeredAt: Date.now()
+        })
+        await ecoDB.save().catch(err => console.log(err));
+        return ecoDB;
+    };
 };

@@ -6,6 +6,7 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const { prefix , token } = require("./config.json");
 const client = new Discord.Client();
+const status = process.env['status'];
 const mongoose = require('mongoose');
 const uri = process.env['MongoDB'];
 const Schema = mongoose.Schema;
@@ -87,7 +88,7 @@ client.once("ready", () => {
   console.log(
     "Yup im online, and im ready to work"
     );
-  client.user.setActivity(`s!help`), {
+  client.user.setActivity(`${status}`), {
     type: "playing"
     };
  

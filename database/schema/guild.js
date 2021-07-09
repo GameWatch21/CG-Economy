@@ -1,9 +1,8 @@
 const mongoose = require("mongoose"),
 config = require("./../../config.json");
 
-module.exports = mongoose.model("guild", new mongoose.Schema({
-
-    id: { type: String }, //ID of the guild
+const GuildSchem = mongoose.Schema({
+      id: { type: String }, //ID of the guild
     registeredAt: { type: Number, default: Date.now() },
     prefix: { type: String, default: config.prefix },
 
@@ -23,5 +22,8 @@ module.exports = mongoose.model("guild", new mongoose.Schema({
             embed: false // Check if embed is enabled
         }
     }}
+});
 
-}));
+const model = mongoose.model("Guild" , GuildSchem);
+
+module.exports = model

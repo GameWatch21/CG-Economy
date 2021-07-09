@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 
-module.exports = mongoose.model("log", new mongoose.Schema({
-
-    //Storing information about each command that is ran
+const LogSchem = mongoose.Schema({
+         //Storing information about each command that is ran
     commandName: { type: String, default: "unknown" },
     date: { type: Number, default: Date.now() },
     author: { type: Object, default: {
@@ -15,5 +14,8 @@ module.exports = mongoose.model("log", new mongoose.Schema({
         channel: null,
         id: null
     }}
+});
 
-}));
+const model = mongoose.model("Log" , LogSchem);
+
+module.exports = model;

@@ -1,7 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const MemberSchem = mongoose.Schema({
+     id: { type: String },
+     guild: { type: String },
+     registeredAt: { type: Number, default: Date.now() }
+});
 
-module.exports = mongoose.model("member", new mongoose.Schema({
-    id: { type: String }, //ID of the user
-    guild: { type: String }, //ID of the guild
-    registeredAt: { type: Number, default: Date.now() }
-}));
+const model = mongoose.model("Member" , MemberSchem);
+
+module.exports = model;

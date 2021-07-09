@@ -6,6 +6,7 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const { prefix , token } = require("./config.json");
 const client = new Discord.Client();
+const mongoose = require('mongoose');
 client.commands = new Discord.Collection();
 
 http.createServer((req, res) => {

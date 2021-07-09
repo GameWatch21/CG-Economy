@@ -7,6 +7,9 @@ const Discord = require("discord.js");
 const { prefix , token } = require("./config.json");
 const client = new Discord.Client();
 const mongoose = require('mongoose');
+const uri = process.env['MongoDB'];
+const Schema = mongoose.Schema;
+const ObjectId = Schema.ObjectId;
 client.commands = new Discord.Collection();
 
 http.createServer((req, res) => {
@@ -69,7 +72,12 @@ for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
 }
-
+mongoose.connect(`${uri}`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
 client.once("ready", () => {
   console.log(
     "Yup im online, and im ready to work"

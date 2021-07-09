@@ -77,7 +77,11 @@ mongoose.connect(`${uri}`, {
   useUnifiedTopology: true,
   useFindAndModify: false,
   useCreateIndex: true
-});
+  }).then(() => {
+        console.log('Connected to MongoDB');
+    }).catch((err) => {
+        console.log('Unable to connect to MongoDB Database.\nError: ' + err);
+    });
 client.once("ready", () => {
   console.log(
     "Yup im online, and im ready to work"

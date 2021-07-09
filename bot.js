@@ -11,7 +11,8 @@ const uri = process.env['MongoDB'];
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 client.commands = new Discord.Collection();
-
+client.event = new Discord.Collection();
+client.Database = require('./database/mongoose.js');
 http.createServer((req, res) => {
 	let responseCode = 404;
 	let content = '404 Error';

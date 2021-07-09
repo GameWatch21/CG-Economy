@@ -7,4 +7,4 @@ const MemberSchem = mongoose.Schema({
 
 const model = mongoose.model("Member", MemberSchem);
 
-module.exports = model;
+module.exports = model;/*  */

@@ -1,3 +1,8 @@
 {
-	"prefix": "s!"
+  //You can change prefix here
+	"prefix": "s!",
+	//You can add your token here
+	"token": "YOUR TOKEN HERE",
+	//Use mongodb URI here
+	"mongodb_uri": "YOUR MONGODB URL HERE"
  }

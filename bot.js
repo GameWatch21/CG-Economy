@@ -4,7 +4,7 @@ const url = require('url');
 const fetchs = require('node-fetch');
 const fs = require("fs");
 const Discord = require("discord.js");
-const { prefix , token } = require("./config.json");
+const { prefix , token , mongodb_uri } = require("./config.json");
 const client = new Discord.Client();
 const status = process.env['status'];
 const mongoose = require('mongoose');
@@ -67,7 +67,7 @@ const commandFiles = fs
   .filter(file => file.endsWith(".js"));
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
-  client.command.set(command.name, command);
+  client.commands.set(command.name, command);
 }
 mongoose.connect(`${uri}`, {
   useNewUrlParser: true,
@@ -114,4 +114,4 @@ client.on("message", message => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(token);

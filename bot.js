@@ -1,14 +1,20 @@
+//To make a website working on node.js
 const http = require("http");
+//For the website port
 const port = 8080;
 const url = require('url');
 const fetchs = require('node-fetch');
+//To read file on a folder
 const fs = require("fs");
+//Variable for discordjs
 const Discord = require("discord.js");
-const { prefix , token , mongodb_uri } = require("./config.json");
+//Importing your information from config.jsom
+const { prefix , token , mongodb_uri , status } = require("./config.json");
+//Make the discord clieny
 const client = new Discord.Client();
-const status = process.env['status'];
+//Variable for mongodb
 const mongoose = require('mongoose');
-const uri = process.env['MongoDB'];
+// [WEBSITE CODE]
 http.createServer((req, res) => {
 	let responseCode = 404;
 	let content = '404 Error';
@@ -61,7 +67,9 @@ http.createServer((req, res) => {
 	res.end();
 })
 	.listen(port);
+// [WEBSITE CODE END]
 
+// [COMMAND READ]
 const commandFiles = fs
   .readdirSync("./commands")
   .filter(file => file.endsWith(".js"));
@@ -69,7 +77,10 @@ for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
 }
-mongoose.connect(`${uri}`, {
+// [COMMAND READ END]
+
+// [MONGODB CONNECT]
+mongoose.connect(mongodb_uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -79,16 +90,23 @@ mongoose.connect(`${uri}`, {
     }).catch((err) => {
         console.log('Unable to connect to MongoDB Database.\nError: ' + err);
     });
+ // [MONGODB CONNECT END]
+ 
+ // [DISCORD ONLINE CHECK]
 client.once("ready", () => {
   console.log(
     "Yup im online, and im ready to work"
     );
-  client.user.setActivity(`${status}`), {
+ // [DISCORD ONLINE CHECK END]
+ 
+ // [DISCORD BOT STATUS]
+  client.user.setActivity(status), {
     type: "playing"
     };
- 
+ // [DISCORD BOT STATUS END]
   }); 
 
+// [DISCORD MAIN COMMAND]
 client.on("message", message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -113,5 +131,6 @@ client.on("message", message => {
     message.reply("there was an error trying to execute that command!");
   }
 });
+// [DISCORD MAIN COMMAND END]
 
 client.login(token);

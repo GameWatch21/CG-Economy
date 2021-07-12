@@ -1,7 +1,7 @@
 {
   "name": "codeground",
-  "version": "1.1.0",
-  "description": "Was a test project to make us a better coder",
+  "version": "1.1.1",
+  "description": "Just a bot for me to code for fun",
   "main": "bot.js",
   "engines": {
     "node": "12.x"
@@ -20,7 +20,6 @@
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
     "querystring": "^0.2.0",
-    "quick.db": "^7.1.2",
-    "ytdl-core": "^4.2.1"
+    "quick.db": "^7.1.2"
   }
 }

@@ -14,8 +14,6 @@ module.exports = {
   .addFields(
     { name: 'Just about you and me, you will get', value: `You get $100 by reacting`},
    )
-  //.addField('Inline field title', 'Some value here', true)
-// .setImage(`${message.guild.icon}`)
   .setTimestamp()
   .setFooter('Created by GameWatch21 | Nah this one, is in Prototype');
       

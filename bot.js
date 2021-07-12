@@ -1,74 +1,136 @@
+//To make a website working on node.js
+const http = require("http");
+//For the website port
+const port = 8080;
+const url = require('url');
+const fetchs = require('node-fetch');
+//To read file on a folder
 const fs = require("fs");
-const Discord = require('discord.js');
-const { prefix,token } = require('./config.json')
+//Variable for discordjs
+const Discord = require("discord.js");
+//Importing your information from config.jsom
+const { prefix , token , mongodb_uri , status } = require("./config.json");
+//Make the discord clieny
 const client = new Discord.Client();
-client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith('.js'));
+//Variable for mongodb
+const mongoose = require('mongoose');
+// [WEBSITE CODE]
+http.createServer((req, res) => {
+	let responseCode = 404;
+	let content = '404 Error';
+  let content2 = '404 Error';
+
+	const urlObj = url.parse(req.url, true);
+
+	if (urlObj.query.code) {
+		const accessCode = urlObj.query.code;
+		const data = {
+			client_id: 'your client id',
+			client_secret: 'your client secret',
+			grant_type: 'authorization_code',
+			redirect_uri: 'https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify',
+			code: accessCode,
+			scope: 'the scopes',
+		};  	fetch('https://discord.com/api/oauth2/token', {
+			method: 'POST',
+			body: new URLSearchParams(data),
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+		})
+			.then(discordRes => discordRes.json())
+			.then(info => {
+				console.log(info);
+				return info;
+			})
+			.then(info => fetch('https://discord.com/api/users/@me', {
+				headers: {
+					authorization: `${info.token_type} ${info.access_token}`,
+				},
+			}))
+			.then(userRes => userRes.json())
+			.then(console.log);
+	}
+
+	if (urlObj.pathname === '/') {
+		responseCode = 200;
+		content = fs.readFileSync('./index.html')
+  }
+
+	res.writeHead(responseCode, {
+		'content-type': 'text/html;charset=utf-8',
+	});
+
+ /* app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+*/
+	res.write(content);
+	res.end();
+})
+	.listen(port);
+// [WEBSITE CODE END]
+
+// [COMMAND READ]
+const commandFiles = fs
+  .readdirSync("./commands")
+  .filter(file => file.endsWith(".js"));
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`)
-  client.commands.set(command.name, command);
+  const command = require(`./commands/${file}`);
+  client.commands(command.name, command);
 }
+// [COMMAND READ END]
 
+// [MONGODB CONNECT]
+mongoose.connect(mongodb_uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+  }).then(() => {
+        console.log('Connected to MongoDB');
+    }).catch((err) => {
+        console.log('Unable to connect to MongoDB Database.\nError: ' + err);
+    });
+ // [MONGODB CONNECT END]
+ 
+ // [DISCORD ONLINE CHECK]
+client.once("ready", () => {
+  console.log(
+    "Yup im online, and im ready to work"
+    );
+ // [DISCORD ONLINE CHECK END]
+ 
+ // [DISCORD BOT STATUS]
+  client.user.setActivity(status), {
+    type: "playing"
+    };
+ // [DISCORD BOT STATUS END]
+  }); 
 
-client.once = ('Ready', () => {
-  console.log("Ah, it's time for work");
-});
-
-client.on('message',message => {
+// [DISCORD MAIN COMMAND]
+client.on("message", message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-  const args = message.content.slice(prefix.length).trim().split(/ +/);
+  const args = message.content
+    .slice(prefix.length)
+    .trim()
+    .split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  const command = client.commands.get(commandName)
-    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+  const command =
+    client.commands.get(commandName) ||
+    client.commands.find(
+      cmd => cmd.aliases && cmd.aliases.includes(commandName)
+    );
 
   if (!command) return;
 
-try {
-  command.execute(message, args);
- } 
-catch (error) {
-  console.error(error);
-  message.reply('there was an error trying to execute that command!');
-}
-  
-  // [BASIC COMMANDS]
-  if(command === "ping"){
-    client.commands.get("ping").execute(message, args);
-  }
-  if(command === "say"){
-    message.channel.send(`${args}`)
-  }
-  if(command === "im"){
-    client.commands.get("im").execute(message, args);
-  }
-  if(command === "reaction"){
-    client.commands.get("reaction").execute(message, args);
-  }
-  // [INFO COMMAND]]
-  if(command === "info-server"){
-    client.commands.get("info-server").execute(message, args);
-  }
-  if(command === "avatar"){
-    client.commands.get("avatar").execute(message, args);
-  }
-  // [BOT COMMAND]
-  if(command === "uptime"){
-    client.commands.get("uptime").execute(message, args);
-  }
-  if(command === "help"){
-    client.commands.get("help").execute(message, args);
-  }
-  // [MODERATION COMMAND]
-   if(command === "prune"){
-    client.commands.get("prune").execute(message, args);
-}
-  // [ECONOMY COMMAND]
-  // [ADMIN COMMAND]
-  if(command === "reload"){
-    client.commands.get("reload").execute(message, args);
+  try {
+    command.execute(message, args);
+  } catch (error) {
+    console.error(error);
+    message.reply("there was an error trying to execute that command!");
   }
 });
+// [DISCORD MAIN COMMAND END]
 
-client.login(token)
+client.login(token);

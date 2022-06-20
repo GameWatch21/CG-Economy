@@ -74,7 +74,7 @@ const commandFiles = fs
   .filter(file => file.endsWith(".js"));
 for (const file of commandFiles) {
   const commands = require(`./commands/${file}`);
-  client.commands(commands.name, commands);
+  client.commands.set(commands.name, commands);
 }
 // [COMMAND READ END]
 

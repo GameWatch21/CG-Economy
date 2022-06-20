@@ -9,8 +9,8 @@ const fs = require("fs");
 //Variable for discordjs
 const Discord = require("discord.js");
 //Importing your information from config.jsom
-const { prefix , token , mongodb_uri , status } = require("./config.json");
-//Make the discord clieny
+const { prefix , token , mongodb_uri , status , clientid , clientsecret , grandtype } = require("./config.json");
+//Make the discord client
 const client = new Discord.Client();
 //Variable for mongodb
 const mongoose = require('mongoose');
@@ -26,9 +26,9 @@ http.createServer((req, res) => {
 	if (urlObj.query.code) {
 		const accessCode = urlObj.query.code;
 		const data = {
-			client_id: 'your client id',
-			client_secret: 'your client secret',
-			grant_type: 'authorization_code',
+			client_id: clientid,
+			client_secret: clientsecret,
+			grant_type: grandtype,
 			redirect_uri: 'https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify',
 			code: accessCode,
 			scope: 'the scopes',
@@ -79,6 +79,7 @@ for (const file of commandFiles) {
 // [COMMAND READ END]
 
 // [MONGODB CONNECT]
+// for future mondodb extenstion
 mongoose.connect(mongodb_uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

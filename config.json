@@ -1,7 +1,9 @@
 {
-
 	"prefix": "s!",
-	"token": "YOUR TOKEN HERE",
+	"token": "your discord token here",
+	"client_id": "your client id",
+	"client_secret": "your client secret",
+	"grant_type": "authorization_code",
 	"mongodb_uri": "YOUR MONGODB URL HERE",
-	"status": "Change this status at config.json"
+	"status": "every game i see 🗿"
  }

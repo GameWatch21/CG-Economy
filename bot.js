@@ -7,11 +7,11 @@ const fetchs = require('node-fetch');
 //To read file on a folder
 const fs = require("fs");
 //Variable for discordjs
-const Discord = require("discord.js");
+const { Client, Intents } = require('discord.js');
 //Importing your information from config.jsom
 const { prefix , token , mongodb_uri , status , clientid , clientsecret , grandtype } = require("./config.json");
 //Make the discord client
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 //Variable for mongodb
 const mongoose = require('mongoose');
 // [WEBSITE CODE]

@@ -103,6 +103,7 @@ client.once("ready", () => {
  // [DISCORD ONLINE CHECK END]
  
  // [DISCORD BOT STATUS]
+ // set your own status at config.json :)
   client.user.setActivity(status), {
     type: "playing"
     };
@@ -112,11 +113,12 @@ client.once("ready", () => {
 // [DISCORD MAIN COMMAND]
 client.on("message", message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+  // this simply help command with arguments
   const args = message.content
     .slice(prefix.length)
     .trim()
     .split(/ +/);
+  // if you use prefix with a character example: s!, it still work if the user use S!
   const commandName = args.shift().toLowerCase();
 
   const command =

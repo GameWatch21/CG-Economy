@@ -16,6 +16,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const mongoose = require('mongoose');
 // Variable for client comman
 client.commands = new Collection();
+
 // [WEBSITE CODE]
 http.createServer((req, res) => {
 	let responseCode = 404;

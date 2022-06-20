@@ -17,5 +17,4 @@ jobs:
         node-version: 12.x
         cache: 'npm'
     - run: npm i
-    - run: npm run build --if-present
-    - run: npm test
+    - run: npm run bot.js

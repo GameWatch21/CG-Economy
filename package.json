@@ -1,14 +1,14 @@
 {
   "name": "codeground",
-  "version": "1.0.2",
-  "description": "Was a test project to make us a better coder",
+  "version": "1.1.1",
+  "description": "Just a bot for me to code for fun",
   "main": "bot.js",
   "engines": {
     "node": "12.x"
   },
   "scripts": {
     "start": "node bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node bot.js"
   },
   "keywords": [],
   "author": "GameWatch21",
@@ -16,10 +16,10 @@
   "dependencies": {
     "discord.js": "^12.5.0",
     "express": "^4.17.1",
+    "mongoose": "^5.13.2",
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
     "querystring": "^0.2.0",
-    "quick.db": "^7.1.2",
-    "ytdl-core": "^4.2.1"
+    "quick.db": "^7.1.2"
   }
 }

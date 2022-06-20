@@ -1,3 +1,7 @@
 {
-	"prefix": "s!"
+
+	"prefix": "s!",
+	"token": "YOUR TOKEN HERE",
+	"mongodb_uri": "YOUR MONGODB URL HERE",
+	"status": "Change this status at config.json"
  }

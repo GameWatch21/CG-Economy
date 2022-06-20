@@ -1,4 +1,4 @@
-const items = require('./models/items.js');
+const items = require('../models/items.js');
 
 module.exports = {
     name: 'test',

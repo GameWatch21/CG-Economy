@@ -1,4 +1,5 @@
 const db = require('quick.db');
+const messages = require('discord.js')
 
 {
   const stone = db.fetch(`stone.${message.author.id}`) || 0;

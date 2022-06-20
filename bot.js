@@ -21,7 +21,8 @@ http.createServer((req, res) => {
   let content2 = '404 Error';
 
 	const urlObj = url.parse(req.url, true);
-
+  
+  // upcoming feature to use discord login
 	if (urlObj.query.code) {
 		const accessCode = urlObj.query.code;
 		const data = {
@@ -51,7 +52,7 @@ http.createServer((req, res) => {
 			.then(userRes => userRes.json())
 			.then(console.log);
 	}
-
+  // will be updated when more page is added
 	if (urlObj.pathname === '/') {
 		responseCode = 200;
 		content = fs.readFileSync('./index.html')
@@ -61,8 +62,6 @@ http.createServer((req, res) => {
 		'content-type': 'text/html;charset=utf-8',
 	});
 
- /* app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
-*/
 	res.write(content);
 	res.end();
 })

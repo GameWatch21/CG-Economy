@@ -73,7 +73,7 @@ const commandFiles = fs
   .readdirSync("./commands")
   .filter(file => file.endsWith(".js"));
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+  const commands = require(`./commands/${file}`);
   client.commands(command.name, command);
 }
 // [COMMAND READ END]

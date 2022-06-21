@@ -1,4 +1,4 @@
-const mongoose = require("mongoose"),
+/*const mongoose = require("mongoose"),
 config = require("./../../config.json");
 
 const GuildSchem = mongoose.Schema({
@@ -27,3 +27,4 @@ const GuildSchem = mongoose.Schema({
 const model = mongoose.model("Guild" , GuildSchem);
 
 module.exports = model
+*/

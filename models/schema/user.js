@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 
 const UserSchem = mongoose.Schema({
   id: { type: String },
@@ -8,3 +8,4 @@ const UserSchem = mongoose.Schema({
 const model = mongoose.model("User", UserSchem);
 
 module.exports = model
+*/

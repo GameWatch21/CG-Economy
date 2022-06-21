@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 
 const ProfileSchem = mongoose.Schema({
   userid: { type: String, require: true, unique: true },
@@ -11,3 +11,4 @@ const ProfileSchem = mongoose.Schema({
 const model = mongoose.model("Profile", ProfileSchem);
 
 module.exports = model
+*/

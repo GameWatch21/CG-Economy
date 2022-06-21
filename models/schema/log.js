@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 
 const LogSchem = mongoose.Schema({
          //Storing information about each command that is ran
@@ -19,3 +19,4 @@ const LogSchem = mongoose.Schema({
 const model = mongoose.model("Log" , LogSchem);
 
 module.exports = model;
+*/

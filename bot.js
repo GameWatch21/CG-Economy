@@ -83,6 +83,7 @@ for (const file of commandFiles) {
 
 // [MONGODB CONNECT]
 // for future mondodb extenstion
+/*
 mongoose.connect(mongodb_uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -93,6 +94,7 @@ mongoose.connect(mongodb_uri, {
     }).catch((err) => {
         console.log('Unable to connect to MongoDB Database.\nError: ' + err);
     });
+  */
  // [MONGODB CONNECT END]
  
  // [DISCORD ONLINE CHECK]

@@ -82,19 +82,7 @@ for (const file of commandFiles) {
 // [COMMAND READ END]
 
 // [MONGODB CONNECT]
-// for future mondodb extenstion
-/*
-mongoose.connect(mongodb_uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
-  }).then(() => {
-        console.log('Connected to MongoDB');
-    }).catch((err) => {
-        console.log('Unable to connect to MongoDB Database.\nError: ' + err);
-    });
-  */
+
  // [MONGODB CONNECT END]
  
  // [DISCORD ONLINE CHECK]

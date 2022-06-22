@@ -1,4 +1,9 @@
 {
-	"prefix": "c!", 
-	"token": "and yes your bot token here"
-}
+	"prefix": "s!",
+	"token": "your discord token here",
+	"client_id": "your client id",
+	"client_secret": "your client secret",
+	"grant_type": "authorization_code",
+	"mongodb_uri": "YOUR MONGODB URL HERE",
+	"status": "every game i see 🗿"
+ }

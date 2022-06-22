@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CodeGround By GameWatch21</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="CodeGround" property="og:title">
+<meta content="A Website to train my coding skill" property="og:description">
+<meta content="https://cg-economy.gamewatch21.repl.co/" property="og:url">
+<meta content="#ff0000" data-react-helmet="false" name="theme-color">
+<link rel="manifest" href="/manifest.json">
+  <meta name="author" content="GameWatch21">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+  </script> 
+</head>
+<body>
+  <style>
+    html{
+      scroll-behavior: smooth
+      }
+    body{
+      background-color:#2F4F4F;
+      }
+    .join-guild{
+      color:white;
+      }
+    .commands{
+      color:white; 
+      }
+    .panel-group{
+      color:black;
+      }
+    .info{
+      color:black;
+      background-color:white;
+      }
+    .card-body{
+      background-color: white;
+      color: black;
+      }
+    .card-body .btn-primary{
+      color: white;
+      }
+    body.dark-theme {
+  color: white;
+  background: #121212;
+}
+  body.dark-theme .card-body{
+    background-color: #121212;
+    color: white;
+    }
+    body.dark-theme .card-body .btn-primary{
+      color: black;
+      }
+  body.dark-theme .jumbotron{
+   background-color: #121212;
+    border-style: groove;
+    }
+   body.dark-theme .info{
+     color: white;
+     background-color:#121212;
+     }
+    body.dark-theme .commands{
+      color: white;
+      background-color: #121212;
+      }
+    body.dark-theme .panel-group{
+      color: white;
+      background-color: #121212;
+      }
+    body.dark-theme .panel-body{
+      color: white;
+      background-color: #121212;
+      }
+    body.dark-theme .panel-heading{
+      color: white;
+      background-color: #121212;
+      }
+    body.dark-theme .btn-toggle{
+      color: white;
+      background-color: #121212;
+      }
+a {
+  color: #0033cc;
+}
+body.dark-theme a {
+  color: #809fff;
+}
+    footer{
+      color:white;
+      background-color:black;
+      width: 300px;
+  margin: auto;
+  border: 1px solid red;
+      text-align:center
+      }
+    
+      
+  </style>
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">CodeGround</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+        
+        <li><a href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&permissions=8&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&scope=bot"><i class="glyphicon glyphicon-download"></i> Invite the Bot</a></li>
+        
+        <li><a href="#commands"><i class="glyphicon glyphicon-console"></i> Commands</a></li>
+       <li><a href="#other-project">Other Project</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="https://discord.com/api/oauth2/authorize?client_id=694134339465642014&redirect_uri=https%3A%2F%2Fcodeground-cg.glitch.me%2F&response_type=code&scope=identify"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="jumbotron jumbotron-fluid text-center" id="home">
+  <h1>New Website coming soon!</h1> 
+    <p>Hello, <kbd>CodordGround</kbd> website will coming soon, so stay Tune :)</p>
+    <p>This website will be a website for bot name <kbd>Strelitzia</kbd>, and also will be my personal Website
+     </p> 
+     <p> <button class="btn-toggle"><i class="glyphicon glyphicon-adjust"></i> Toggle Dark-Mode</button> </p>
+      </div>
+    
+      <script>
+        const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+});
+      </script> 
+
+  <div class="info" id="info">
+    <div class="card">
+    <h4 class="card-title">Information</h4>
+  <p class="card-text">Welcome to CodeGround Website, where you can see all my works :)</p>
+    <p class="card-text">I already make some Discord Bot (i didnt verify the bot, so you can copy the source code)</p>
+    <p class="card-text">CodeGround is created by <kbd>GameWatch21</kbd>, it's purpose is to train myself to become a coder</p>
+    <p class="card-text">Actually this is like a hobby.. wait no i mean free time work, so the project isnt fully working, probably there is a bug or problem, since i also want to train myself</p>
+    <p class="card-text">With this website, i can also see my own achievement and what i already done</p> 
+    <p><a href="https://discord.gg/ASHGkue" class="card-link" style="button">Join our Discord Server</a></p>
+  <p>  <a href="#" class="card-link">Strelitzia Github Link</a></p>
+  </div>
+</div>
+    
+  <div class="commands" id="commands">
+    <h3>List of Commands</h3>
+  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <kbd>s!help</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">Give the Help page for all the command list<p>Usage: <kbd>s!help</kbd></p><p>Aliases: [NONE]</p></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <kbd>s!avatar</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">Showing Your, or someone avatar(s)<p>Usage: <kbd>s!avatar [USER]</kbd></p><p>Aliases: [NONE]</p></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        <kbd>s!prune</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">Pruning or Deleting message on a channel<p>Usage: <kbd>s!prune [AMOUNT]</kbd></p><p>Aliases: [NONE]</p></div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        <kbd>s!register</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">Register to the economy Games, Choose a class and start playing<p>Usage: <kbd>s!register | s!register [CLASS]</kbd></p><p>Aliases: s!reg</p></div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        <kbd>s!profile</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">Check your profile game, If you already register, you can view your profile, oh also you can check someone profile too<p>Usage: <kbd>s!profile | s!profile [USER]</kbd></p><p>Aliases: s!pro</p></div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+        <kbd>s!info-server</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse">
+      <div class="panel-body">Check the server information<p>Usage: <kbd>s!info-server</kbd></p><p>Aliases: [NONE]</p></div>
+    </div>
+  </div>
+      <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+        <kbd>s!inventory</kbd></a>
+      </h4>
+    </div>
+    <div id="collapse7" class="panel-collapse collapse">
+      <div class="panel-body">Check your Economy Inventory<p>Usage: <kbd>s!inventory</kbd></p><p>Aliases: [s!inv]</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class="other-project" id= "other-project">
+    <div class="card">
+  <div class="card-body"><kbd>GameWatch21</kbd> also work on other project, well the other project used from Codeground project and just add some modifitcation
+ <p>You can visit the Github link where you can fork my other project, if you curious where i code it, both project i use glitch.com and repl.it, Then i use mobile phone to code (10% using pc)</p>
+ <p>So here you may take a look with my other project i work on</p>
+    <a href="https://github.com/GameWatch21/faucet-bot" class="btn btn-primary">Discord Faucet Bot</a>
+      </div>
+</div>
+    </div>
+  
+  <footer>
+    <p>Created by <kbd>GameWatch21</kbd></p>
+    </footer>
+    <!--    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a> -->
+        
+    <script>
+		function generateRandomString() {
+			const rand = Math.floor(Math.random() * 10);
+			let randStr = '';
+
+			for (let i = 0; i < 20 + rand; i++) {
+				randStr += String.fromCharCode(33 + Math.floor(Math.random() * 94));
+			}
+
+			return randStr;
+		}
+
+		window.onload = () => {
+			const fragment = new URLSearchParams(window.location.hash.slice(1));
+
+			if (fragment.has("access_token")) {
+				const urlState = fragment.get("state");
+				const stateParameter = localStorage.getItem('stateParameter');
+				if (stateParameter !== atob(decodeURIComponent(urlState))) {
+					return console.log('You may have been clickjacked!');
+				}
+
+				const accessToken = fragment.get("access_token");
+				const tokenType = fragment.get("token_type");
+
+				fetch('https://discord.com/api/users/@me', {
+					headers: {
+						authorization: `${tokenType} ${accessToken}`
+					}
+				})
+					.then(res => res.json())
+					.then(response => {
+						console.log(response);
+						const { username, discriminator } = response;
+						document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+					})
+					.catch(console.error);
+
+			}
+			else {
+				const randStr = generateRandomString();
+				localStorage.setItem('stateParameter', randStr);
+
+				document.getElementById('login').href += `&state=${encodeURIComponent(btoa(randStr))}`;
+				document.getElementById('login').style.display = 'block';
+			}
+		}
+  <!--   const btn = document.querySelector(".btn-toggle");
+<!-- btn.addEventListener("click", function () {
+ <!-- document.body.classList.toggle("dark-theme");
+    static void UpdatePresence()
+{
+    DiscordRichPresence discordPresence;
+    memset(&discordPresence, 0, sizeof(discordPresence));
+    discordPresence.state = "index.html";
+    discordPresence.details = "Viewing the CodordGround Website";
+    discordPresence.startTimestamp = 0;
+    discordPresence.endTimestamp = 0;
+    discordPresence.largeImageText = "Numbani";
+    discordPresence.smallImageText = "Rogue - Level 100";
+    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+    discordPresence.partySize = 1;
+    discordPresence.partyMax = 0;
+    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
+    Discord_UpdatePresence(&discordPresence);
+}
+
+	</script>
+</body>
+</html>

@@ -2,6 +2,23 @@
 A Discord Bot for coding Ground
 Roughly, this bot is created to train myself to code a discord bot myself, actually not myself, i also learn code and learn guides on other website too, such as [DiscordJs Guide](https://discordjs.guide)
 Also, Join our [Discord Server](https://discord.gg/ASHGkue) so it's easy to meet me and ask something, actually im not your teacher so i will not teach you 😂
+
+At Wednesday 8 December, i make website for CodeGround, actually sorry for the bad css, i'm bad at choosing style and animation, so it's still in maintenance and probably never going to publish it to global but here if you want
+[CodeGround Website](https://cg-economy.gamewatch21.repl.co/)
+If it offline, please wait a minute till it load :) thank you
+
+Before this, i use glitch.com as my personal Coding space and as github uploder
+But at Wednesday, 16 December, i decide to use repl.it for my coding space, it's also because of the free hosting and mobile friendly (not really, but i for me i already code easier)
+
+If you want to help me building project, or you have a project that are forked from my code, or you got motivation from my code, you can send your github link and i will list the project
+
+If you found that my code is different from other, it's normal, we have different "client" different "variable" and etc
+
+I will be posting the installation guide soon but, you only need to make ".env" file and copy this text
+`TOKEN =  [your token]`
+`F_CREDIT = Created by GameWatch21`
+The complete installation guide will be posted soon
+
 ## Working Log
 Here are my **Working Log** that i need to work on and not hopefully work, but i must make it work
 The checked one, mean it's already working, for the others, i dont know when i will finish it, but i will finish it soon
@@ -11,11 +28,11 @@ The checked one, mean it's already working, for the others, i dont know when i w
 - [x] Making an Embed message working (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Making Purne Message (Wednesday, 25 November 2020 by **_GameWatch21_**)
 - [x] Make backend code more dynamic, not that dynamic,i  use my own style to write codes even it's bad (Thursday, 26 Novermber 2020 by **_GameWatch21_**)
-- [ ] Add avatar command
-- [ ] Create Status for bot
+- [x] Add avatar command (Wednesday, 8 December 2020 by **_GameWatch21_**)
+- [x] Create Status for bot (Wednesday, 16 December 2020 by **_GameWatch21_**)
 - [ ] Making an Economy Games [This one is different, will be on differeny section]
 - [ ] Make an Moderation commands
-- [ ] Make an Website for the bot
+- [x] Make an Website for the bot (Wednesday, 8 December 2020 by **_GameWatch21_**)
 - [ ] Add music feature to the bot
 - [ ] Brainstorming New Features
 
@@ -54,3 +71,8 @@ If you found out a bug, or something that's weird on the code, just open a issue
 
 ## 🍴For Forking
 Feel free to fork my code, it's free and you can edit with your own style, well i didnt explain well the code what's the section is, what's this used for, so you will need to explore it yourself, you can decide you want to use my credits or no, i dont care just do whatever you want i will try to make new command and code as my free time
+
+## 🛠️Other Project
+There is other project i work on, even though, i still make the project as an open source, so probably you want to fork it, or you have better idea than mine
+You can easily fork it and use it, no need installation guide :)
+- [Discord Faucet Bot](https://github.com/GameWatch21/faucet-bot) | A fork from CG-Economy, turn into a cryptocurrency faucet bot
